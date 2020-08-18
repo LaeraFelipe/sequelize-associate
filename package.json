@@ -1,6 +1,6 @@
 {
   "name": "sequelize-associate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A helper to associate all sequelize models using the \"associate\" function.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,12 @@
   ],
   "author": "Felipe Laera",
   "license": "MIT",
+  
   "peerDependencies": {
     "sequelize": "^6.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LaeraFelipe/sequelize-associate"
   }
 }
