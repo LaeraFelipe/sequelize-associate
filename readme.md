@@ -26,7 +26,6 @@ sequelizeAssociate(__dirname);
 You can also pass some options:
 
 ```js
-//Match all files that ends with model.js
 sequelizeAssociate(__dirname, { 
   pattern: /\.model.js$/, //Match all files that ends with model.js.
   recursive: true //Will search in all subdirectories.
