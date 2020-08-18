@@ -15,7 +15,7 @@ npm install --save sequelize-associate
 
 ### Using
 
-You can use in a index file on yout models directory for example: 
+You can use in a index file on your models directory for example: 
 
 ```js
 import sequelizeAssociate from 'sequelize-associate';
