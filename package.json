@@ -1,6 +1,6 @@
 {
   "name": "sequelize-associate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A helper to associate all sequelize models using the \"associate\" function.",
   "main": "index.js",
   "scripts": {
