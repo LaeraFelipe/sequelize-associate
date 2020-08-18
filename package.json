@@ -1,0 +1,22 @@
+{
+  "name": "sequelize-associate",
+  "version": "1.0.0",
+  "description": "A helper to associate all sequelize models using the \"associate\" function.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "sequelize",
+    "associate",
+    "models",
+    "associations",
+    "sequelize-associate",
+    "model"
+  ],
+  "author": "Felipe Laera",
+  "license": "MIT",
+  "peerDependencies": {
+    "sequelize": "^6.3.4"
+  }
+}
