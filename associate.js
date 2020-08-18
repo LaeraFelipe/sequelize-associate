@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const sequelize = require('sequelize');
 
+function isSequelizeModel(item) {
+  return item &&
+    typeof item === 'function' &&
+    item.prototype instanceof sequelize.Model;
+}
+
 function getModelsToAssociate(path) {
   let result = [];
 
@@ -11,14 +17,14 @@ function getModelsToAssociate(path) {
     return result;
   }
 
-  if (requiredValue instanceof sequelize.Model) {
+  if (isSequelizeModel(requiredValue)) {
     result.push(requiredValue);
-  } else if (requiredValue.default && requiredValue.default instanceof sequelize.Model) {
+  } else if (isSequelizeModel(requiredValue.default)) {
     result.push(requiredValue.default);
   } else if (Object.keys(requiredValue).length) {
     for (const subRequiredValue of Object.values(requiredValue)) {
-      if (subRequiredValue instanceof sequelize.Model) {
-      result.push(subRequiredValue);
+      if (isSequelizeModel(subRequiredValue)) {
+        result.push(subRequiredValue);
       }
     }
   }
